@@ -10,4 +10,7 @@ class Image(models.Model):
     image_desc =models.CharField(max_length=1000)
     created_at = models.DateTimeField(auto_now= True)
     
+    #Representation of what will be represented in view or admin dashboard
     
+    def __str__(self) -> str:
+        return self.image_name

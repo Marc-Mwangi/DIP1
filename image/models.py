@@ -1,4 +1,3 @@
-from tkinter import image_names
 from django.db import models
 from category.models import Category
 

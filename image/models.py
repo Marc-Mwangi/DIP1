@@ -5,6 +5,7 @@ from category.models import Category
 
 class Image(models.Model):
     
+    images = models.ImageField(upload_to="photos/images")
     image_name = models.CharField(max_length=50)
     image_slug =models.CharField(max_length=100)
     image_desc =models.CharField(max_length=1000)

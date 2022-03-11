@@ -1,9 +1,8 @@
-from tkinter import image_names
 from django import forms
 
-class ImageForm(forms.form):
+class ImageForm(forms.Form):
     
-    image = forms.ImageField(upload_to="photos/images")
-    image_name= forms.forms.CharField(max_length=100)
-    image_desc =forms.forms.CharField(max_length=1000)
+    #image = forms.ImageField(upload_to="photos/images")
+    image_name= forms.CharField(max_length=100)
+    image_desc =forms.CharField(max_length=1000)
     

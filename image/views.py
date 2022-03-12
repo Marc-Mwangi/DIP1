@@ -12,6 +12,9 @@ def images(request):
         if form.is_valid():
             image_name= form.cleaned_data["image_name"]
             image_desc = form.cleaned_data["image_desc"]
+            
+            print(image_name)
+            print(image_desc)
     form = ImageForm()
     
     context ={

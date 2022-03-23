@@ -1,1 +1,1 @@
-gunicorn picsa.wsgi
+web: gunicorn picsa.wsgi

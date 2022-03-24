@@ -28,8 +28,11 @@ def images(request):
         image0.save()
         
     form = ImageForm()
+    Image.objects.all()
+    picture= Image.objects.all()
     
     context ={
-        'form': form
+        'form': form,
+        "picture":picture, 
     }
     return render(request, 'index.html', context)

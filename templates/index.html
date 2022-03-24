@@ -1,4 +1,9 @@
-<h1>Image page runs<h1>
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' %}
+
 <form action="{% url 'images' %}" method="post" enctype="multipart/form-data">
 
     {% csrf_token %}
@@ -6,3 +11,20 @@
     <button>Submit</button>
     
 <form>
+
+    <div class="fizz">
+      
+        {%for i in picture %}
+        <div class="con bg-slate-200 py-3">
+            <br>
+            <div class="flex justify-center">
+                <img src="../media/{{i.image}}" height=200px width=200px> 
+            </div>
+            <p class="flex justify-center"> {{ i.image_caption }} </p>
+            <br>
+            <br>
+        </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
